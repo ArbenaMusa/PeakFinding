@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeakFinding", "PeakFinding\PeakFinding.csproj", "{EA3BD28F-DE88-4C86-9523-D7E982DBC38F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA3BD28F-DE88-4C86-9523-D7E982DBC38F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA3BD28F-DE88-4C86-9523-D7E982DBC38F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA3BD28F-DE88-4C86-9523-D7E982DBC38F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA3BD28F-DE88-4C86-9523-D7E982DBC38F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F22C0E36-C47A-47CC-B922-6511F252B446}
+	EndGlobalSection
+EndGlobal
