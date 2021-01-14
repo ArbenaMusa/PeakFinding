@@ -23,12 +23,12 @@ namespace PeakFinding
             // If max is less than its left 
             if (max < matrix[max_index, mid - 1])
                 return FindPeak(matrix, rows, columns,
-                       (int)(mid - Math.Ceiling((double)mid / 2)));
+                       (int)(mid - Math.Ceiling((double)(columns - 1 - mid) / 2)));
 
             // If max is less than its right 
             // if (max < arr[max_index][mid+1]) 
             return FindPeak(matrix, rows, columns,
-                   (int)(mid + Math.Ceiling((double)mid / 2)));
+                   (int)(mid + Math.Ceiling((double)(columns - 1 - mid) / 2)));
         }
 
         // Function to find the maximum in column 'mid' and its index, 'rows' is number of rows.
