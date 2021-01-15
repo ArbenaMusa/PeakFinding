@@ -1,50 +1,52 @@
-﻿using System;
-
-namespace PeakFinding
+﻿namespace PeakFinding
 {
     public static class PeakFinder
     {
-        public static int FindPeak(int[,] matrix, int rows, int columns, int mid)
+        public static int FindPeak(int[,] matrix, int left = 0, int right = -1)
         {
-            int[] max_function = Max(matrix, rows, mid);
-            int max_index = max_function[0];
-            int max = max_function[1];
+            if (right == -1) right = matrix.GetLength(1); // right = number of columns
 
-            // If we are on the first or last column, 
-            // max is a peak 
-            if (mid == 0 || mid == columns - 1)
-                return max;
+            int j = (left + right) / 2; // mid column
+            int[] maxArray = FindMax(matrix, j); //returns an array of (index of max element, max element)
+            int max_index = maxArray[0]; // index of largest element in mid column
+            int max_element = maxArray[1]; // largest element in mid column
 
-            // If mid column maximum is also peak 
-            if (max >= matrix[max_index, mid - 1] &&
-                max >= matrix[max_index, mid + 1])
-                return max;
+            // If we are on the first or last column, max_element is a peak
+            if (j == 0 || j == matrix.GetLength(1))
+                return max_element;
 
-            // If max is less than its left 
-            if (max < matrix[max_index, mid - 1])
-                return FindPeak(matrix, rows, columns,
-                       (int)(mid - Math.Ceiling((double)(columns - 1 - mid) / 2)));
+            // if max element is bigger than his neighbours, max_element is a peak
+            else if (max_element >= matrix[max_index, j - 1] && max_element >= matrix[max_index, j + 1])
+                return max_element;
 
-            // If max is less than its right 
-            // if (max < arr[max_index][mid+1]) 
-            return FindPeak(matrix, rows, columns,
-                   (int)(mid + Math.Ceiling((double)(columns - 1 - mid) / 2)));
+            // If max element is less than its left, pick left columns
+            else if (matrix[max_index, j - 1] > matrix[max_index, j])
+            {
+                right = j;
+                return FindPeak(matrix, left, right);
+            }
+            // If max element is less than its right, pick right columns
+            else
+            {
+                left = j;
+                return FindPeak(matrix, left, right);
+            }
         }
 
-        // Function to find the maximum in column 'mid' and its index, 'rows' is number of rows.
-        public static int[] Max(int[,] matrix, int rows, int mid)
+        // Function to find the maximum and its index for a column
+        static int[] FindMax(int[,] matrix, int column)
         {
-            int max_index = 0;
             int max = 0;
-            for (int i = 0; i < rows; i++)
+            int index = 0;
+            for (int i = 0; i < matrix.GetLength(0); i++)
             {
-                if (max < matrix[i, mid])
+                if (max < matrix[i, column])
                 {
-                    max = matrix[i, mid];
-                    max_index = i;
+                    max = matrix[i,column];
+                    index = i;
                 }
             }
-            return new int[] { max_index, max } ;
+            return new int[] { index, max };
         }
 
     }
