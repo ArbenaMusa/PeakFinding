@@ -42,6 +42,8 @@ Në hapin e radhës formula do të kishte formën:
 
 <img src="https://latex.codecogs.com/svg.latex?T(n,\frac{m}{2})=\theta%20(n)+T(n,\frac{m}{4})"/></br>
 
+dhe
+
 <img src="https://latex.codecogs.com/svg.latex?T(n,\frac{m}{4})=\theta%20(n)+T(n,\frac{m}{8})"/></br>
 
 ...
