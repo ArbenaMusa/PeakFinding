@@ -2,7 +2,7 @@
 | ---------------------------------------------------- | -------------------------------------------- |
 |                                                      |                                              |
 
-# PeakFinding
+# Gjetja e anëtarit kulm në matricë
 
 Një anëtar i matricës A[i][j] është kulm nëse është më i madh ose baraz se fqinjët e tij A[i-1][j], A[i+1][j], A[i][j-1] dhe A[i][j+1]. Për antarët në qoshe, fqinjët që mungojnë konsiderohen si vlera minus infinit(-∞).
 
