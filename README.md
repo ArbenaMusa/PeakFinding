@@ -7,10 +7,28 @@
 Një anëtar i matricës A[i][j] është kulm nëse është më i madh ose baraz se fqinjët e tij A[i-1][j], A[i+1][j], A[i][j-1] dhe A[i][j+1]. Për antarët në qoshe, fqinjët që mungojnë konsiderohen si vlera minus infinit(-∞).
 
 ```
+Example 1:
 Input : 10 20 15
         21 30 14
-         7 16 32
+        7  16 32
 Output : 30
+
+Example 2:
+Input : 0 0 9 0 0 0 0
+        0 0 0 0 0 0 0
+        0 1 0 0 0 0 0
+        0 2 0 0 0 0 0
+        0 3 0 0 0 0 0
+        0 5 0 0 0 0 0
+        0 4 7 0 0 0 0
+Output: 5
+
+Example 3:
+Input : 27 29 30 32 10 8  10 10 20 21 20
+        18 20 22 24 14 13 12 11 14 15 14
+        27 32 33 35 15 9  11 21 23 25 23
+        42 42 44 46 18 17 19 20 26 30 26
+Output: 46
 ```
 
 Për gjetjen e një elementi kulm në një matricë përmes "kërkimit binar" ndjekni hapat e mëposhtëm:
