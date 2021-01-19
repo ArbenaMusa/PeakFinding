@@ -25,6 +25,11 @@ namespace PeakFinding
                               {  27, 32, 33, 35, 15, 9 , 11, 21, 23, 25, 23 },
                               {  42, 42, 44, 46, 18, 17, 19, 20, 26, 30, 26 } };
 
+            int[,] matrix4 = { { 1 , 2 , 3 , 4  },
+                               { 5 , 6 , 7 , 8  },
+                               { 9 , 10, 11, 12 },
+                               { 13, 14, 15, 16 } };
+
             Console.WriteLine($"Peak element in the given matrix is : {PeakFinder.FindPeak(matrix3)}");
         }
 

@@ -12,7 +12,7 @@
             int max_element = maxArray[1]; // largest element in mid column
 
             // If we are on the first or last column, max_element is a peak
-            if (j == 0 || j == matrix.GetLength(1))
+            if (j == 0 || j == matrix.GetLength(1) - 1)
                 return max_element;
 
             // if max element is bigger than his neighbours, max_element is a peak
